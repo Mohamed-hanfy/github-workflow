@@ -1,7 +1,7 @@
 name: First Workflow
 #trigger
 on :
-  push: 
+  push:   
     branches:
       - main
 
@@ -12,3 +12,10 @@ jobs:
     steps:
       - name: Print a welcome message
         run: echo "welcome to workflos!"
+      - name: Checkout repository
+        uses:  actions/checkout@v5.0.0
+
+      - name: List repository files
+        run: ls 
+      
+        
